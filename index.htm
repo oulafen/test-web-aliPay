@@ -241,25 +241,25 @@
             }
 
             // nonsupport Android intent
-            alert('canIntent-->' + canIntent);
-            alert('userAgent-->' + ua);
+//            alert('canIntent-->' + canIntent);
+//            alert('userAgent-->' + ua);
 
             if (!canIntent) {
                 if(isAndroid) {
-                    alert('---in--> 1');
+//                    alert('---in--> 1');
                     var alipaysUrl = 'alipays://platformapi/startApp?appId=20000125&orderSuffix=' + o.android +'#Intent;scheme=alipays;package=com.eg.android.AlipayGphone;end';
                 }
                 //fix for iOS QQ browser
                 else if (ua.indexOf('mqqbrowser') > -1) {
-                    alert('---in--> 2');
+//                    alert('---in--> 2');
                     var alipaysUrl = 'alipay://alipayclient/?' + o.android;
                 }
                 else {
-                    alert('---in--> 3');
+//                    alert('---in--> 3');
                     var alipaysUrl = 'alipay://alipayclient/?' + o.ios;
                 }
                 if ( ua.indexOf('qq/') > -1 || ( ua.indexOf('safari') > -1 && ua.indexOf('os 9_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 10_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 11_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 12_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 13_') > -1 ) ) {
-                    alert('---in--> 4');
+//                    alert('---in--> 4');
                     var openSchemeLink = document.getElementById('openSchemeLink');
                     if (!openSchemeLink) {
                         openSchemeLink = document.createElement('a');
@@ -277,12 +277,12 @@
                     // trigger click
                     openSchemeLink.dispatchEvent(customClickEvent());
                 } else if(isOriginalChrome) {
-                    alert('---in--> 5');
+//                    alert('---in--> 5');
                     if(0 === 0) {
                         location.href = alipaysUrl;
                     }
                 } else {
-                    alert('---in--> 6');
+//                    alert('---in--> 6');
                     var ifr = document.createElement('iframe');
                     ifr.src = alipaysUrl;
                     ifr.style.display = 'none';
