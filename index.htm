@@ -256,7 +256,7 @@
                     alert('---in--> 3');
                     var alipaysUrl = 'alipay://alipayclient/?' + o.ios;
                 }
-
+                alert('userAgent-->' + ua);
                 if ( ua.indexOf('qq/') > -1 || ( ua.indexOf('safari') > -1 && ua.indexOf('os 9_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 10_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 11_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 12_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 13_') > -1 ) ) {
                     alert('---in--> 4');
                     var openSchemeLink = document.getElementById('openSchemeLink');
