@@ -261,12 +261,16 @@
                 if ( ua.indexOf('qq/') > -1 || ( ua.indexOf('safari') > -1 && ua.indexOf('os 9_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 10_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 11_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 12_') > -1 ) || ( ua.indexOf('safari') > -1 && ua.indexOf('os 13_') > -1 ) ) {
                     alert('---in--> 4');
                     var openSchemeLink = document.getElementById('openSchemeLink');
+                    alert('---in--> 4-1');
+
                     if (!openSchemeLink) {
+                        alert('---in--> 4-2');
                         openSchemeLink = document.createElement('a');
                         openSchemeLink.id = 'openSchemeLink';
                         openSchemeLink.style.display = 'none';
                         document.body.appendChild(openSchemeLink);
                     }
+                    alert('---in--> 4-3');
 
                     //openSchemeLink.href = alipaysUrl;
                     // oppo浏览器兼容写法
